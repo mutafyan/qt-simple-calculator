@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QLabel>
-
+#include <QWindow>
 double num_first;
 
 MainWindow::MainWindow(QWidget *parent)
@@ -9,7 +9,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::Calculator)
 {
     ui->setupUi(this);
-
 
     connect(ui->pushButton_0,SIGNAL(clicked()), this, SLOT(input_numbers()));
     connect(ui->pushButton_1,SIGNAL(clicked()), this, SLOT(input_numbers()));
